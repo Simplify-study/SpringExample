@@ -1,0 +1,15 @@
+spring:
+  profiles:  aaaa
+   
+iot: 
+  home:
+    path: a/a/a/a
+    
+---
+
+spring:
+  profiles:  bbbb
+   
+iot: 
+  home:
+    path: b/b/b/b
