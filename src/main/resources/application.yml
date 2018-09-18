@@ -1,13 +1,9 @@
 spring:
   profiles:
     include: 
-      restApi
-      
-  datasource:
-    driverClassName: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://52.78.41.121:3306/portfolio
-    username: portfolio
-    password: Whdgns1!
+      restApi,
+      restTemplate,
+      db
 
 iot: 
   home:

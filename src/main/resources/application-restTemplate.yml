@@ -1,0 +1,23 @@
+restTemplate:
+  factory:
+    readTimeout: 5000 
+    connectTimeout: 3000
+  httpClient:
+    maxConnTotal: 100
+    maxConnPerRoute: 5 
+    
+spring:
+  profiles:  aaaa
+   
+iot: 
+  home:
+    path: a/a/a/a
+    
+---
+
+spring:
+  profiles:  bbbb
+   
+iot: 
+  home:
+    path: b/b/b/b
