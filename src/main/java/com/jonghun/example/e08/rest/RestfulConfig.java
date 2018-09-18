@@ -2,30 +2,14 @@ package com.jonghun.example.e08.rest;
 
 import org.apache.http.client.HttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.RestTemplate;
 
-import com.jonghun.example.e05.service.SecurityMember;
+@Configuration
+public class RestfulConfig {
 
-@Controller
-public class RestController {
-
-	@Autowired
-	RestTemplate restTemplate;
-	
-	@RequestMapping("/rest")
-	public String home(@AuthenticationPrincipal SecurityMember securityMember) {
-		
-		String obj = restTemplate.getForObject("http://naver.com", String.class);
-		System.out.println(obj);
-		return "";
-	}
-	
 	@Bean
 	public RestTemplate restTemplate() {
 		
