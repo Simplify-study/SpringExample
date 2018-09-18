@@ -72,6 +72,13 @@
         </dependency>
 		<!-- SECURITY -->
 		
+		<!-- APACHE HTTP CLIENT -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <!-- APACHE HTTP CLIENT -->
+        
 	</dependencies>
 
 	<build>

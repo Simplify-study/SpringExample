@@ -13,8 +13,10 @@ public class HomeController {
 	public String home(@AuthenticationPrincipal SecurityMember securityMember) {
 		
 		System.out.println(securityMember);
-		System.out.println(securityMember.getUsername());
-		System.out.println(securityMember.getIp());
+		if(securityMember != null) {
+			System.out.println(securityMember.getUsername());
+			System.out.println(securityMember.getIp());
+		}
 		
 		return "hello";
 	}
