@@ -6,7 +6,7 @@
 	<groupId>com.jonghun</groupId>
 	<artifactId>SpringExample</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<name>SpringExample</name>
 	<description>Example project for Spring Boot</description>
@@ -79,6 +79,14 @@
         </dependency>
         <!-- APACHE HTTP CLIENT -->
         
+        <!-- JASYPT -->
+        <dependency>  
+		    <groupId>org.jasypt</groupId>  
+		    <artifactId>jasypt-spring3</artifactId>  
+		    <version>1.9.2</version>  
+		</dependency>  
+		<!-- JASYPT -->
+		
 	</dependencies>
 
 	<build>
