@@ -1,9 +1,14 @@
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
+
 spring:
   datasource:
+    sql-script-encoding: UTF-8
     driverClassName: org.mariadb.jdbc.Driver
     url: jdbc:mariadb://52.78.41.121:3306/portfolio
     username: portfolio
-    password: Whdgns1!
+    password: vhxmvhffldh1!
     
 restTemplate:
   factory:
