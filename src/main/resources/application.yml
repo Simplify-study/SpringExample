@@ -1,7 +1,4 @@
-jasypt:
-  encryptor:
-    bean: jasyptStringEncryptor
-    
+
 restTemplate:
   factory:
     readTimeout: 5000 
