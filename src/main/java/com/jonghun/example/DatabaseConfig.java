@@ -32,7 +32,7 @@ public class DatabaseConfig {
 	    return DataSourceBuilder
 	        .create()
 	        .url(globalPropertySource.getUrl())
-	        .driverClassName("org.mariadb.jdbc.Driver")
+	        .driverClassName("net.sf.log4jdbc.sql.jdbcapi.DriverSpy")
 	        .username(globalPropertySource.getUsername())
 	        .password(globalPropertySource.getPassword())
 	        .build();
