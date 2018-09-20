@@ -31,8 +31,8 @@ public class PathVariableController2 {
 	@RequestMapping("/readUser")
 	public Member readUser() {
 		
-		String encodePass = passwordEncoder.encode("abcd");
-		System.out.println(encodePass);
+//		String encodePass = passwordEncoder.encode("abcd");
+//		System.out.println(encodePass);
 		
 		Member member = userMapper.readUser("ABC");
 		return member;

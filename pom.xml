@@ -78,14 +78,6 @@
             <artifactId>httpclient</artifactId>
         </dependency>
         <!-- APACHE HTTP CLIENT -->
-        
-        <!-- JASYPT -->
-        <dependency>  
-		    <groupId>org.jasypt</groupId>  
-		    <artifactId>jasypt-spring3</artifactId>  
-		    <version>1.9.2</version>  
-		</dependency>  
-		<!-- JASYPT -->
 		
 	</dependencies>
 

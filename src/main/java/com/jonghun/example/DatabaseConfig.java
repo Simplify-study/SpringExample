@@ -6,6 +6,8 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.annotation.MapperScan;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
@@ -19,19 +21,20 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 public class DatabaseConfig {
 
+	Logger LOGGER = LoggerFactory.getLogger("LOGIN_LOG");
+	
 	@Autowired
-	DatabasePropertySource databasePropertySource;
+	GlobalPropertySource globalPropertySource;
 	
 	@Bean
 	@Primary
 	public DataSource customDataSource() {
-
 	    return DataSourceBuilder
 	        .create()
-	        .url(databasePropertySource.getUrl())
+	        .url(globalPropertySource.getUrl())
 	        .driverClassName("org.mariadb.jdbc.Driver")
-	        .username(databasePropertySource.getUsername())
-	        .password(databasePropertySource.getPassword())
+	        .username(globalPropertySource.getUsername())
+	        .password(globalPropertySource.getPassword())
 	        .build();
 	}
 	

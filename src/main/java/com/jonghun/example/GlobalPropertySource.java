@@ -7,10 +7,10 @@ import org.springframework.context.annotation.PropertySources;
 
 @Configuration
 @PropertySources({
-	@PropertySource( value = "file:c:/dev/db.properties", ignoreResourceNotFound = true ),
-	@PropertySource( value = "classpath:~/env/db.properties", ignoreResourceNotFound = true)
+	@PropertySource( value = "file:c:/dev/config.properties", ignoreResourceNotFound = true ),
+	@PropertySource( value = "classpath:~/env/config.properties", ignoreResourceNotFound = true)
 })
-public class DatabasePropertySource {
+public class GlobalPropertySource {
 
 	@Value("${spring.datasource.url}")
 	private String url;

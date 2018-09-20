@@ -13,3 +13,15 @@ restTemplate:
 iot:
   home:
     path: /data
+
+logging:
+  path: c:/dev/log/  
+  file: log-file
+
+---
+spring:
+  profiles: dev
+  
+logging:
+  path: /log/spring/
+  
