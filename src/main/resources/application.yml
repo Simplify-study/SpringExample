@@ -13,7 +13,6 @@ iot:
 
 logging:
   path: c:/dev/log/  
-  file: log-file
 
 ---
 spring:
@@ -21,4 +20,4 @@ spring:
   
 logging:
   path: /log/spring/
-  
+  file: log-file  
