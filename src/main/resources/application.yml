@@ -13,11 +13,11 @@ iot:
 
 logging:
   path: c:/dev/log/  
-
+  file: log-file  
+  
 ---
 spring:
-  profiles: dev
+  profiles: log-linux
   
 logging:
   path: /log/spring/
-  file: log-file  
