@@ -7,18 +7,11 @@ import org.springframework.context.annotation.PropertySources;
 
 @Configuration
 @PropertySources({
-	@PropertySource( value = "file:c:/dev/1.properties", ignoreResourceNotFound = true ),
-	@PropertySource( value = "classpath:config.properties", ignoreResourceNotFound = true)
+	@PropertySource( value = "file:c:/dev/db.properties", ignoreResourceNotFound = true ),
+	@PropertySource( value = "classpath:~/env/db.properties", ignoreResourceNotFound = true)
 })
 public class DatabasePropertySource {
 
-	/*
-	 * spring.datasource.url=jdbc:mariadb://52.78.41.121:3306/portfolio
-spring.datasource.username=portfolio
-spring.datasource.password=Whdgns1!
-	 * 
-	 * */
-	
 	@Value("${spring.datasource.url}")
 	private String url;
 	
