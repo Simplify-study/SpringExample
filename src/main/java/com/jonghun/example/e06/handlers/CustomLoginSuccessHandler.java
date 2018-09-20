@@ -15,9 +15,6 @@ import com.jonghun.example.e05.service.SecurityMember;
 public class CustomLoginSuccessHandler extends SavedRequestAwareAuthenticationSuccessHandler {
 	
 	public CustomLoginSuccessHandler(String defaultTargetUrl) {
-		
-		System.out.println("defaultTargetUrl=" + defaultTargetUrl);
-		
         setDefaultTargetUrl(defaultTargetUrl);
     }
     

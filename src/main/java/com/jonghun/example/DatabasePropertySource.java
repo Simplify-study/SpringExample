@@ -1,0 +1,43 @@
+package com.jonghun.example;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
+
+@Configuration
+@PropertySources({
+	@PropertySource( value = "file:c:/dev/1.properties", ignoreResourceNotFound = true ),
+	@PropertySource( value = "classpath:config.properties", ignoreResourceNotFound = true)
+})
+public class DatabasePropertySource {
+
+	/*
+	 * spring.datasource.url=jdbc:mariadb://52.78.41.121:3306/portfolio
+spring.datasource.username=portfolio
+spring.datasource.password=Whdgns1!
+	 * 
+	 * */
+	
+	@Value("${spring.datasource.url}")
+	private String url;
+	
+	@Value("${spring.datasource.username}")
+	private String username;
+	
+	@Value("${spring.datasource.password}")
+	private String password;
+
+	public String getUrl() {
+		return url;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+}
